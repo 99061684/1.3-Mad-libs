@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Ravie';
+    src: url("fonts/RAVIE.TTF") format("truetype"),
+    url("fonts/raavi.ttf") format("truetype")
+    
+}
+/* styling elementen */
+body {
+    background-color: grey;
+}
+
+form {
+    display: grid;
+    grid-auto-columns: auto auto;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+form label {
+    grid-column: 1/2;
+    margin-bottom: 15px;
+}
+
+form input {
+    grid-column: 2/3;
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: #535245;
+}
+
+
+footer p {
+    color: white;
+    padding: 0.5rem;
+}
+
+/* styling classes */
+.center_div {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.mad_libs {
+    font-family: 'Ravie';
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.form {
+    background-color: white;
+}
+
+.menu {
+    background-color: #ab2513;
+}
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.menu li:hover{
+    background-color: #8a1e10;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+.uitslag {
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+/* styling id */
