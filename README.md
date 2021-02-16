@@ -16,10 +16,10 @@ Na verzenden van het formulier Er heerst paniek... worden de ingevulde gegevens 
 
 De pagina Onkunde bevat een formulier met de volgende velden: (zie afbeelding formulier_onkunde)
 Na verzenden van het formulier Onkunde worden de ingevulde gegevens als volgt gebruikt: (zie afbeelding resultaat_onkunde)
-Technische eisen
+## Technische eisen
 
-De web applicatie bestaat uit pagina's opgebouwd uit correct HTML en CSS
-Door gebruik te maken van html formulieren wordt de gebruiker om gegevens gevraagd
+* De web applicatie bestaat uit pagina's opgebouwd uit correct HTML en CSS
+* Door gebruik te maken van html formulieren wordt de gebruiker om gegevens gevraagd
 Door gebruik te maken van php worden de post gegevens uitgelezen na verzenden van de html formulieren.
 Door gebruik te maken van php worden de uitgelezen formulier gegevens in een grappige tekst geplaatst.
 Alle velden zijn verplicht en er dient server-side validatie plaats te vinden
