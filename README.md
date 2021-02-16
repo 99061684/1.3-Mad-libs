@@ -1,5 +1,7 @@
 # 1.3-Mad-libs
 
+# zie code voor de uitwerking
+
 ## Opdracht 4 bestand(en)
 Tijdens deze opdracht ga je een dynamische web applicatie ontwikkelen waar de bezoeker een aantal woorden moet invullen die vervolgens in een grappige tekst worden geplaatst. Hierbij maak je gebruik van HTML, CSS en PHP.
 
@@ -26,3 +28,5 @@ Het spel moet aan de volgende functionele eisen voldoen:
 * Ook validatie van formulieren dient goed te gebeuren zoals o.a. correct afvangen van invoer van script tag en/of html tags
 * Er is een menu aanwezig met links naar "Er heerst paniek..." en "Onkunde"
 * In de footer staat je naam met copyright teken en jaar wanneer je de opdracht hebt gemaakt
+
+# zie code voor de uitwerking
