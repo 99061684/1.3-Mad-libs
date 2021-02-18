@@ -1,3 +1,6 @@
+<?php
+    include 'formcontrole.php';
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -7,6 +10,18 @@
     <title>mad libs</title>
 </head>
 <body>
+    <style>
+        .uitslag {
+            display: <?php echo $uitslag_display ?>;
+        }
+        form {
+            display: <?php echo $form_display ?>;
+        }
+        footer {
+            display: <?php echo $uitslag_display ?>;
+        }
+    </style>
+
     <div class="center_div">
         <h1 class="mad_libs">mad libs</h1>
         <div class="form">
@@ -16,8 +31,9 @@
                 <li><a href="formulier_onkunde.php">Onkunde</a></li>
             </ul>
             </div>
-            <form action="resultaat_onkunde.php" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                 <h1>Onkunde</h1>
+                <p class="let_op">let op! alleen letters en spatie's zijn toegestaan.</p>
                 <label for="willen_input">Wat zou je graag willen kunnen?</label>
                 <input type="text" id="willen_input" name="willen_input" placeholder="vul hier in..." required>
 
@@ -40,21 +56,29 @@
                 <input type="text" id="ergste_input" name="ergste_input" placeholder="vul hier in..." required></input>
 
                 <input type="submit" value="Submit">
+                <ul>
+                    <?php 
+                        foreach ($Errors as $name => $value) {
+                            echo "<li class='let_op'>" . $Errors[$name]. "</li>";
+                        } 
+                    ?>
+                </ul>
             </form> 
+            <div class="uitslag">
+                <h1>Onkunde</h1>
+                <p>Er zijn veel mensen die niet kunnen <?php echo $inputs["willen_input"]; ?>. 
+                Neem nou <?php echo $inputs["goed_opschieten_persoon_input"]; ?>. 
+                Zelfs met de hulp van een <?php echo $inputs["vakantie_spullen_input"]; ?> of zelfs <?php echo $inputs["getal_input"]; ?> kan <?php echo $inputs["goed_opschieten_persoon_input"]; ?> niet <?php echo $inputs["willen_input"]; ?>. 
+                Dat heeft niet te maken met een gebrek aan <?php echo $inputs["beste_eigenschap_input"]; ?>, maar met een te veel aan <?php echo $inputs["slechste_eigenschap_input"]; ?>. 
+                Te veel <?php echo $inputs["slechste_eigenschap_input"]; ?> leidt tot <?php echo $inputs["ergste_input"]; ?> en dat is niet goed als je wilt <?php echo $inputs["willen_input"]; ?>. 
+                Helaas voor <?php echo $inputs["goed_opschieten_persoon_input"]; ?>. <br> <br>
+                </p>
+            </div>
+            <footer>
+                <p>&#xA9; [Bas Verdoorn], 2021</p> 
+            </footer>
         </div>
         
     </div>
 </body>
 </html>
-
-<?php 
-    session_start();
-    if ($_GET['Error'] = 'true') {
-        foreach ($Errors as $element => $error) {
-            if ($error != "null Errors") {
-                echo $Errors[$name];
-            }
-        }
-    }
-    
-?>

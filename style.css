@@ -78,7 +78,13 @@ footer p {
     color: white;
 }
 
+.let_op {
+    color: red;
+    font-size: 0.8rem;
+}
+
 .uitslag {
+    display: none;
     padding-right: 3rem;
     padding-left: 3rem;
 }
