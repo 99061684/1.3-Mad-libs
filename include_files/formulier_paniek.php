@@ -1,4 +1,4 @@
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?pagina=er_heerst_paniek" method="post">
     <h1>Er heerst paniek...</h1>
     <p class="let_op">let op! alleen letters en spatie's zijn toegestaan.</p>
     <label for="huisdier_input">Welk dier zou je nooit als huisdier willen hebben?</label>

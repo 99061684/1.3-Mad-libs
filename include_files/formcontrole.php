@@ -2,8 +2,6 @@
 // define variables and set to empty values
 $inputs = array();
 $Errors = array();
-$uitslag_display = "none";
-$form_display = "grid";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach($_POST as $name=>$value){
@@ -33,10 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<br>";
         print_r($Errors);
         }
-    }
-    if (empty($Errors)) {
-        $uitslag_display = "block";
-        $form_display = "none";
     }
 }
 

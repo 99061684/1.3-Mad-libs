@@ -1,4 +1,4 @@
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?pagina=onkunde" method="post">
     <h1>Onkunde</h1>
     <p class="let_op">let op! alleen letters en spatie's zijn toegestaan.</p>
     <label for="willen_input">Wat zou je graag willen kunnen?</label>

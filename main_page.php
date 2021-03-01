@@ -15,16 +15,25 @@
         <div class="form">
            <div class="menu">
             <ul>
-                <li><a href="formulier_paniek.php">Er heerst paniek...</a></li>
-                <li><a href="formulier_onkunde.php">Onkunde</a></li>
+                <li><a href="main_page.php?pagina=er_heerst_paniek">Er heerst paniek...</a></li>
+                <li><a href="main_page.php?pagina=onkunde">Onkunde</a></li>
             </ul>
             </div>
             <?php
-                if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit'])) {
-                    include 'include_files/reslultaat_onkunde.php';
+                if ($_GET['pagina'] == 'onkunde') {
+                    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["submit"]) && empty($Errors)) {
+                        include 'include_files/reslultaat_onkunde.php';
+                    } else {
+                        include 'include_files/formulier_onkunde.php';
+                    }
                 } else {
-                    include 'include_files/formulier_onkunde.php';
+                    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["submit"]) && empty($Errors)) {
+                        include 'include_files/resultaat_paniek.php';
+                    } else {
+                        include 'include_files/formulier_paniek.php';
+                    }
                 }
+                
                 
             ?>
         </div>
