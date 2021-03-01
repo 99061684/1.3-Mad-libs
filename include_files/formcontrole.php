@@ -17,19 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         $inputs[$name] = $input_form;
-        
-        echo "<h1>De ingevulde gegevens zijn:</h1>";
-        echo "Naam: " . $name;
-        echo "<br>";
-        echo "input_form: " . $input_form;
-        echo "<br>";
-        echo "nameErr: " . $nameErr;
-        echo "<br>";
-        echo "empty $Errors: " . empty($Errors);
-        echo "<br>";
-        print_r($inputs);
-        echo "<br>";
-        print_r($Errors);
         }
     }
 }
